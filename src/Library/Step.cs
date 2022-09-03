@@ -23,5 +23,9 @@ namespace Full_GRASP_And_SOLID.Library
         public int Time { get; set; }
 
         public Equipment Equipment { get; set; }
+        public double SubTotal() //Patrón Expert: Creo un metodo para retornar información de la que Step es reponsable. En este caso el subtotal de tiempo*costo horario del equipamiento.
+        {
+            return this.Equipment.HourlyCost*this.Time;
+        }
     }
 }
